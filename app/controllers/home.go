@@ -17,7 +17,10 @@ type HomeController struct {
 }
 
 func (c *HomeController) Index(ctx *fiber.Ctx) error {
-	return ctx.SendString(c.testService.Test())
+	log.Println("test:", c.testService.Test())
+	return ctx.Render("index", map[string]interface{}{
+		"Name": "World!",
+	})
 }
 
 func (c *HomeController) Post(ctx *fiber.Ctx) error {

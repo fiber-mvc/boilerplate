@@ -2,10 +2,13 @@ module boilerplate
 
 go 1.17
 
+replace github.com/fiber-mvc/fiber-mvc => ../fiber-mvc
+
 require (
 	github.com/fiber-mvc/fiber-mvc v0.0.0-20211227163850-2798977cbf16
 	github.com/gofiber/fiber/v2 v2.23.0
 	github.com/goioc/di v1.7.0
+	github.com/joho/godotenv v1.4.0
 )
 
 require (
@@ -13,6 +16,7 @@ require (
 	github.com/go-playground/locales v0.14.0 // indirect
 	github.com/go-playground/universal-translator v0.18.0 // indirect
 	github.com/go-playground/validator/v10 v10.9.0 // indirect
+	github.com/gofiber/template v1.6.20 // indirect
 	github.com/jinzhu/inflection v1.0.0 // indirect
 	github.com/jinzhu/now v1.1.4 // indirect
 	github.com/klauspost/compress v1.13.4 // indirect

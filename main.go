@@ -8,14 +8,15 @@ import (
 	core "github.com/fiber-mvc/fiber-mvc"
 	"github.com/fiber-mvc/fiber-mvc/database"
 	"github.com/fiber-mvc/fiber-mvc/routing"
-
 	"github.com/gofiber/fiber/v2"
+	"github.com/joho/godotenv"
+	"os"
 )
 
 func main() {
-
+	godotenv.Load()
 	core.Boot(core.Config{
-
+		Debug: os.Getenv("APP_DEBUG") == "true",
 		Database: database.DBConfig{
 			Driver:   "sqlite",
 			Database: "db.db",
