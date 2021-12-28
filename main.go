@@ -39,5 +39,9 @@ func main() {
 			&routes.WebRouter{},
 			&routes.ApiRouter{},
 		},
+
+		Setup: func(app *fiber.App) {
+			app.Static("/public", "./public")
+		},
 	})
 }

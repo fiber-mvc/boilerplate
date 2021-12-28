@@ -1,3 +1,6 @@
 .idea/
 *.exe
 *.db
+node_modules/
+mix-manifest.json
+yarn.lock
